@@ -1,0 +1,765 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home/page</title>
+  <!-- in here i start the CSS sence you didn't teach us the external CSS if i put it i think you would be mad that is why i 
+    leave the external css part but i would love to use it the code would be efficient and clean and easy to see sorry fo the trouble!!!
+  -->
+  <style>
+     /* so let's talk about CSS  --> */
+/* so starting from the body by making box-sizing:border-box we set the body to full web screen and by puting margin and padding 0 
+    this will help us to grasp the hole wed screen so we can style it like we want
+*/
+    body {
+      box-sizing: border-box;
+      margin: 0; 
+      padding: 0;
+      min-height: 200vh;
+      position: relative;
+      background: linear-gradient(to right, rgb(75, 121, 161), rgb(40, 62, 81));
+    }
+     /*  so now i am stateing the left side of the header and by using the CSS attribute and if i must have to define all of them 
+     this is going to take a lot of space so long story short this will make my left side of header which is HOME 
+     give inner padding and outside margin and for the font color for the border i use border,bor-style,bor-radius and when we a havor over it 
+     to make it look like it is liked i use curse which is pointer 
+     */
+    .left-s{
+      position: relative;
+      font-size: 25px;
+      margin-left: 10px;
+      padding: 2px 2px 2px 2px;
+      color: #515c61;
+      background-color: rgb(216, 227, 236);
+      border: 4px solid;
+      border-style: groove;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+/*  so i'm back agian in this section what i'm doing is giving my left side HOME a little transition and transform which
+   kind look like fun and attractive
+*/
+    .left-s:hover{
+      border-radius: 15px;
+      color: rgb(216, 227, 236);
+      background-color: #515c61;
+      transition: 0.35s ease-in-out;
+      transform: translate(-2px, -2px );
+    }
+/*  so this one i'm trying to make my web a little more realistic so about this one is this will make my hole list orderd and 
+     let's see some CSS property position:absolute this will put the list relative to it's ancestor and it's relative attribute is
+     right,left,bottom,top o i almost forget about the list to remove the defualt list style i used the list-style-type so that it remove
+     the dot's and what's so ever .
+*/
+    .left-ul ul{
+      font-size: 20px;
+      position: absolute;
+      top: 70px;
+      left: 80px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+/*  still in the list but in the section what am doing is removing the defualt because some times it looks like a little boring*/
+    li a{
+      margin: 20px 0;
+  padding: 10px 20px;
+      text-decoration: none;
+    }
+/* o this one the one that i love about this is you can give a suprise for the use so let's see in the M&P i have cover in the privouse one 
+  but the transition and transformation make the havoring best
+*/
+    li .hov:hover{
+      margin: 0;
+      padding: 5px;
+      background-color: #9bc2d4;
+      border-radius: 8px;
+      border-bottom: 3px solid  rgb(40, 62, 81);
+      transition: 0.35s ease-out;
+      transform: translate(-2px -2px);
+    }
+  /* button is one of the HTML element that give for the web a button function but in this project i did't use it for that function
+     it's just empty but i give it a font-size,margin, padding,border but going throuht all the button function is boring so let me 
+     review everything in here i set the background in linear-gradient so it looks more attractive and attention seeker and in Havor 
+     pseoude class i change the color,background and curser 
+  */
+    button{
+      font-size: 19px;
+      margin-right: 10px;
+      padding: 2px 2px 2px 2px;
+      border: royalblue solid;
+      border-radius: 10px;
+    }
+
+    .join:hover{
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(to right, rgb(102, 96, 148), rgb(115, 3, 192), rgb(236, 56, 188), rgb(253, 239, 249));
+    }
+
+    .sign:hover {
+     cursor: pointer;
+     color: black;
+     background: rgb(211, 39, 39);
+    }
+
+    .sign{
+      color: white;
+      background: linear-gradient(to right, rgb(102, 96, 148), rgb(115, 3, 192), rgb(236, 56, 188), rgb(253, 239, 249));
+    }
+
+    .join{
+      color: aliceblue;
+      background-color: rgb(221, 28, 28);
+    }
+/* miss me, so let see the header CSS like other one i state the font(family),background,margin and a new thing is display;flex
+  justify-content,align-items let me define them this is done in the (div) section div is just a box which is empty or empty container
+  so the display one give the designer the power to put the div in flexable of grid or anything and by stating the justify-content i can 
+  contront the elements in the div in the horizontal manner and by stating the  align-items,content what so ever it will ajust the element 
+  in vertical way
+*/
+    .header{
+      height: 100px;
+      font-size: 35px;
+      font-weight: 700;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, rgb(112, 225, 245), rgb(255, 209, 148));
+    }
+/* this part is the netflix one so it's forwared that it doesn;t need any defination */
+    header{
+      color: rgb(224, 39, 39);
+      margin: 300px;
+      padding: 0;
+    }
+/* so this part is the main (core) part of the project and i use the predifine CSS element i put the display: flex so it can move freely 
+   in the place it was given flex-direction: row; this is a family of flex which it help us in puting things in order of row or colomun(revers)
+   row-gap & colomun-gap is  for me to put a dicent distance bitween the two pics
+*/
+    .mid{
+      display: flex;
+      flex-direction: row;
+      margin: 0 10px 0 19px;
+      padding: 0;
+      row-gap: 10px;
+      column-gap: 5px;
+      flex-wrap: wrap;
+      
+    }
+/* this one is complex but let's make it easy to see throught so  .card-container .card a  this is nested selecting and the is universal,
+  id,element,class and by using this i design the card fornt and link side z-index is when you need it to be up front when eveything is 
+  behined it
+*/
+    .card-container .card a {
+  padding: 30px;
+  width: 250px;
+  height: 270px;
+  border: 4px double black;
+  border-radius: 10% 10% ;
+  background: linear-gradient(to right, rgb(240, 194, 123), rgb(221, 214, 221));
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: 0.25s ease;
+  z-index: 2;
+}
+/*  this one will make move the card toward us and make it like it is animated the transform: translate this part gives the card 
+    a moving motion by -30px to x axiss, -30px to y axiss
+*/
+.card-container .card a:hover {
+  transform: translate(-30px, -30px);
+  border-color: #5bc0eb;
+}
+
+/* this is the trick to hide what is upfront and make it look like it doesn't  exist we can make it by stating the display: to none */
+.card-container .card a:hover .card--display {
+  display: none;
+}
+
+/*  and i'm back in this section of the trick is to make it visible in the given W&H boom now when they havor over it the image
+   will pop up
+*/
+.card-container .card a:hover .card--hover {
+  display: block;
+}
+
+/* so still here with the trick and in this one i'm going to hide agian the uncessary thing like the front page and make it blank 
+   so when the image pop's up it will be clean sleet
+*/
+.card-container .card a .card--hover {
+  display: none;}
+
+  /* so in this selector it is diving to the i element by selecting one from the other and puting the CSS property to
+   that component make it steel atractive
+  */
+  .card-container .card a .card--display i {
+  font-size: 30px;
+  margin-top: 100px;
+  padding-left: 30px;
+}
+/* let me cover all the card property i set FLEX J-C:S-EV A-I;Fl-E  this will set the component align to center*/
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.card--display{
+  border: 3px inset rgb(59, 56, 56);
+}
+
+.card--display, .flex{
+  border: 3px inset rgb(58, 54, 54);
+}
+/* thank's god now we are in the footer part or the bottom in this one  just to make it simple i divided it in to the parts and this 
+  one #fol is called id selector and in diging deeper or in being focused this one is better than class 
+*/
+#fol{
+  width: 280px;
+  height: 290px;
+  border-radius: 10% 10%;
+}
+/* but still this is the real footer that discribe it's property display: flex will set the footer to be flexable ,
+  justify-content: space-between this one sets the element(goo,span,copyright) divide the equaly in the space provided
+  by the footer
+*/
+    .foo{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 88px;
+      background: linear-gradient(to right, rgb(211, 149, 155), rgb(191, 230, 186));
+      position: absolute;
+      bottom: 0;
+    }
+/* puting id selector then stating the font,text-decoration so that it woudn't look like other defualt link */
+    #goo{
+      font-size: 22px;
+      text-decoration: none;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 600;
+    }
+/* this specifies the paragraph only in the "having fun" place */
+    .foo p{
+      font-size: 25px;
+      color: rgb(90, 87, 83);
+    }
+    /* in this case what i'm doing is stayling the .discription to make it more atractive sence the purpose of CSS is thst  */
+    .discription{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: line-block;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* sence i didn't want to use h1 the i have to style the font and P&M to */
+  .discription h2{
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+  }
+/* still in CSS and stayling a paragraph but in this case i have to put height so it wouldn't push back the button key down  */
+  .discr {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+    height: 120px;
+  }
+  /* this is the button part that i put and stayling it again and down there is just puting the transition and translate together */
+  .desk{
+    margin: 0;
+    background-color: hsl(17, 66%, 48%);
+    font-size: 19px;
+  }
+  .desk:hover{
+    margin: 0;
+    background: linear-gradient(to right, rgb(102, 96, 148), rgb(132, 98, 155), rgb(216, 118, 190), rgb(226, 215, 223));
+    transform: translate(-8px, -8px);
+    transition: 2s ease-in-out;
+  }
+  .mov{
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    font-family: sans-serif;
+    color: white;
+  }
+
+  .mov p{
+    font-size: 20px;
+    font-family: sans-serif;
+    padding:0;
+    margin: 0;
+  }
+  .mov pre{
+    margin: 0;
+    height: 80px;
+  }
+/* this is the unorder list CSS section so in this one just seting up the display: flex and align it but the real decoration is down there */
+  .dis-hov {
+        display: flex;
+        width: 100px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        min-width: 90;
+      }
+      /* the beauti of the list comes from this CSS section so let's see it margin:0 because i don't want distance to be far
+      seting the font(family), display: inline-flex so it will take bothe the inline and flex CSS behavour so it will be good
+      to set it in this type of situation 
+      */
+      .dis-h li {
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 15px;
+        display: inline-flex;
+        align-items: center;
+        border: 2px solid;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 90px;
+        background-color: #545b5e;
+        color: white;
+      }
+/* in this section sameold sameold there is nothing new that i should explain */
+      .dis-h li:hover {
+        transform: translate(-3px, -3px);
+        transition: 0.2s ease-in-out;
+        border-radius: 5px;
+        background-color: rgb(49, 49, 199);
+        color: white;
+      }
+
+      .left-ul .dis-h {
+        display: none;
+      }
+
+     .left-ul .dis-hov:hover .dis-h {
+        cursor: pointer;
+        display: inline-block;
+      }
+
+  </style>
+</head>
+<link rel="stylesheet" href="style.css">
+<!-- so now i'm going to start the HTML part so bakleup and get ready -->
+<body>
+  <!-- so the idea in here is to put the header section in the top and divide them in to three main and six sub-main part -->
+  <div class="header">
+    <!-- by using  div us container to our header -->
+    <p class="left-s">HOME</p>
+    <!-- the home side is done by <P> tag us you can see  and living from there and going to unorder <ul>  and using anchor to link the
+    page from onther web,channel,html or anything   
+    -->
+    <div class="left-ul">
+        <ul>
+          <li><a href="#" class="hov">Recent</a></li>
+          <li><a href="#" class="hov">Popular</a></li>
+          <!-- in general this part is hiden from the display by display:none -->
+     <span class="dis-hov">   <li><a href="#" class="hov">Genre</a>
+            <ul class="dis-h">
+              <li>Action</li>
+              <li>Adventure</li>
+              <li>Animation</li>
+              <li>Biography</li>
+              <li>Comedy</li>
+              <li>Crime</li>
+              <li>Documentary</li>
+              <li>Drama</li>
+              <li>Family</li>
+              <li>Fantasy</li>
+              <li>Film-Noir</li>
+              <li>Game-Show</li>
+              <li>History</li>
+              <li>Horror</li>
+              <li>Music</li>
+              <li>Musical</li>
+              <li>Mystery</li>
+              <li>News</li>
+              <li>Reality-TV</li>
+              <li>Romance</li>
+              <li>Sci-Fi</li>
+              <li>Sport</li>
+              <li>Talk-Show</li>
+              <li>Thriller</li>
+              <li>War</li>
+              <li>Western</li>
+              <li>Adult</li>
+            </ul>
+          </li>
+        </span>
+        <span class="dis-hov">  <li><a href="#" class="hov">Year</a>
+          <ul class="dis-h">
+            <li>2023</li>
+            <li>2022</li>
+            <li>2021</li>
+            <li>2020</li>
+            <li>2019</li>
+            <li>2018</li>
+            <li>2017</li>
+            <li>2016</li>
+            <li>2015</li>
+            <li>2014</li>
+            <li>2013</li>
+            <li>2012</li>
+            <li>2011</li>
+            <li>2010</li>
+            <li>2009</li>
+            <li>2008</li>
+            <li>2007</li>
+            <li>2006</li>
+            <li>2005</li>
+            <li>2004</li>
+            <li>2003</li>
+            <li>2002</li>
+          </ul>
+        </li>
+      </span>
+      <span class="dis-hov">  <li><a href="#" class="hov"> A-Z </a>
+            <ul class="dis-h">
+              <li>0</li>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>A</li>
+              <li>B</li>
+              <li>C</li>
+              <li>D</li>
+              <li>E</li>
+              <li>F</li>
+              <li>G</li>
+              <li>H</li>
+              <li>I</li>
+              <li>J</li>
+              <li>K</li>
+              <li>L</li>
+              <li>M</li>
+              <li>N</li>
+              <li>O</li>
+              <li>P</li>
+              <li>Q</li>
+              <li>R</li>
+              <li>S</li>
+              <li>T</li>
+              <li>U</li>
+              <li>V</li>
+              <li>W</li>
+              <li>X</li>
+              <li>Y</li>
+              <li>Z</li>
+            </ul>
+          </li>
+        </span>
+        <span class="dis-hov">   <li><a href="#" class="hov">Language</a>
+            <ul class="dis-h">
+              <li>German</li>
+              <li>French</li>
+              <li>Espanol</li>
+              <li>Italian</li>
+              <li>Russian</li>
+              <li>Portuguese</li>
+              <li>Hindi</li>
+              <li>Korean</li>
+              <li>Czech</li>
+              <li>Polish</li>
+              <li>Turkish</li>
+              <li>Hungarian</li>
+              <li>Thia</li>
+              <li>Ukrainian</li>
+              <li>Japanese</li>
+              <li>Norweigian</li>
+              <li>Swedish</li>
+              <li>Finnish</li>
+              <li>Danish</li>
+              <li>Catalan</li>
+              <li>Chinese</li>
+              <li>Arabic</li>
+              <li>Telugu</li>
+              <li>Tamil</li>
+              <li>Slovak</li>
+              <li>Urdu</li>
+              <li>Dutch</li>
+              <li>Latino</li>
+              <li>Farsi</li>
+            </ul>
+          </li>
+        </ul>
+      </span>
+    </div>
+    <header>NETFLIX</header>
+    <div class="right-s">
+     <a href="#"><button class="sign">Sign In</button></a>
+     <a href="#"><button class="join">Join Now</button></a>
+    </div>
+    
+  </div>
+  <div class="mov">
+    <!--<span> span is a tag that act like blank in blank space or like a div that have no atribute but for CSS and JavaScript it is essencial -->
+    <span>
+      <h1>Movies</h1>
+      <!-- <pre> pre is a tag it's purpose is to put thing as they were in the web like he found it it will put it without any editing -->
+     <pre><p>Movies move us like nothing else can, whether they’re scary, funny,
+dramatic, romantic or anywhere in-between. So many titles,
+so much to experience.
+</p>
+      </pre> 
+    </span>
+  </div>
+  <div class="mid">
+    <div class="card-container"> 
+      <div class="card"><a href="https://ww1.goojara.to/mzE5Pv">
+          <div class="card--display"><i class="material-icons">AVATER-2</i>
+            <span class="flex"><p>BOX OFFICE</p> <p> Rating:7.8</p></span>
+            <!-- <h3> is a type of header that is the font is defualt by it self and there are h1,h2,h3,h4,h5,h6 with there font-size diffrence -->
+            <h3 class="flex">Action,Adventuer</h3>
+            <p class="flex">Juke Sully lives eith his newfound family formed on the extrasola moon pandora.</p>
+          </div>
+          <div class="card--hover">
+           <img src="Avatar_The_Way_of_Water_poster.jpg" id="fol">
+          </div></a>
+        <div class="card--border"></div>
+        <!-- class="" is an atribute tha help when we need it in the CSS and JavaScript -->
+      </div>
+    </div>
+    <div class="card-container"> 
+      <div class="card"><a href="https://ww1.goojara.to/mpQGk5">
+          <div class="card--display"><i class="material-icons">The Magician's Elephant</i>
+            <span class="flex"><p>BOX OFFICE</p> <p> Rating:7.8</p></span>
+            <h3 class="flex">Action,Adventuer</h3>
+            <p class="flex">Juke Sully lives eith his newfound family formed on the extrasola moon pandora.</p>
+          </div>
+          <div class="card--hover">
+           <img src="magical elephant.jpg" id="fol">
+          </div></a>
+        <div class="card--border"></div>
+      </div>
+    </div>
+    <div class="card-container"> 
+      <div class="card"><a href="https://ww1.goojara.to/eAegDO">
+          <div class="card--display"><i class="material-icons">Star War:Bad Bitch</i>
+            <span class="flex"><p>BOX OFFICE</p> <p> Rating:7.8</p></span>
+            <h3 class="flex">Action,Adventuer</h3>
+            <p class="flex">Juke Sully lives eith his newfound family formed on the extrasola moon pandora.</p>
+          </div>
+          <div class="card--hover">
+           <img src="badbich.jpg" id="fol">
+          </div></a>
+        <div class="card--border"></div>
+      </div>
+    </div>
+    <div class="card-container"> 
+      <div class="card"><a href="https://ww1.goojara.to/e067Xp">
+          <div class="card--display"><i class="material-icons">School Sprits</i>
+            <span class="flex"><p>BOX OFFICE</p> <p> Rating:7.8</p></span>
+            <h3 class="flex">Action,Adventuer</h3>
+            <p class="flex">Juke Sully lives eith his newfound family formed on the extrasola moon pandora.</p>
+          </div>
+          <div class="card--hover">
+           <img src="./schoolsprits.jpg" id="fol">
+          </div></a>
+        <div class="card--border"></div>
+      </div>
+    </div>
+    <div class="card-container"> 
+      <div class="card"><a href="https://ww1.goojara.to/ea7nG1">
+          <div class="card--display"><i class="material-icons">Snow Fall</i>
+            <span class="flex"><p>BOX OFFICE</p> <p> Rating:7.8</p></span>
+            <h3 class="flex">Action,Adventuer</h3>
+            <p class="flex">Juke Sully lives eith his newfound family formed on the extrasola moon pandora.</p>
+          </div>
+          <div class="card--hover">
+           <img src="p16937688_b_h9_ab.jpg" id="fol">
+          </div></a>
+        <div class="card--border"></div>
+      </div>
+    </div>
+    <div class="card-container"> 
+      <div class="card"><a href="https://ww1.goojara.to/m9WvW6">
+          <div class="card--display"><i class="material-icons">We Have A Ghost</i>
+            <span class="flex"><p>BOX OFFICE</p> <p> Rating:7.8</p></span>
+            <h3 class="flex">Action,Adventuer</h3>
+            <p class="flex">Juke Sully lives eith his newfound family formed on the extrasola moon pandora.</p>
+          </div>
+          <div class="card--hover">
+           <img src="we-have-a-ghost.webp" type="webp" id="fol">
+          </div></a>
+        <div class="card--border"></div>
+      </div>
+    </div>
+    <div class="card-container"> 
+      <div class="card"><a href="https://ww1.goojara.to/emwlg1">
+          <div class="card--display"><i class="material-icons">Die Hart:Kevin Hart</i>
+            <span class="flex"><p>BOX OFFICE</p> <p> Rating:7.8</p></span>
+            <h3 class="flex">Action,Adventuer</h3>
+            <p class="flex">Juke Sully lives eith his newfound family formed on the extrasola moon pandora.</p>
+          </div>
+          <div class="card--hover">
+           <img src="die-hart-2-die-harter-750x400.jpg" id="fol">
+          </div></a>
+        <div class="card--border"></div>
+      </div>
+    </div>
+    <div class="card-container"> 
+      <div class="card"><a href="https://ww1.goojara.to/mnkB2O">
+          <div class="card--display"><i class="material-icons">Get Hard</i>
+            <span class="flex"><p>BOX OFFICE</p> <p> Rating:7.8</p></span>
+            <h3 class="flex">Action,Adventuer</h3>
+            <p class="flex">Juke Sully lives eith his newfound family formed on the extrasola moon pandora.</p>
+          </div>
+          <div class="card--hover">
+           <img src="get hard.jpg" id="fol">
+          </div></a>
+        <div class="card--border"></div>
+      </div>
+    </div>
+  </div>
+  <div class="discription">
+    <h2 class="discription">There’s even more to watch.</h2>
+    <pre class="discr"><p>Netflix has an extensive library of feature films, documentaries, TV 
+   shows, anime, award-winning Netflix originals, and more. Watch as 
+         much as you want, anytime you want.</p>
+                      </pre>
+                      <!-- <button> button is an element tha have in defualt a button strucrure and function but you can get same and 
+                      better function and use in <input> element thst have a diffrent type like radio,submit,chakebox,date&time,text...
+                      and so on  
+                      -->
+                      <button class="desk">
+                        JOIN US
+                      </button>
+  </div>
+  <div class="foo">
+    <div><a href="#" id="goo">Goojara.com</a></div>
+    <div><p>Having Fun<span>😉✌️</span></p></div>
+    <div><p>&copy;Copyright:2022</p></div>
+  </div>
+</body>
+</html>
+
+<!--
+                             (~^--^~) XHTML
+  XHTML ( EXtensible HyperText Markup Language), developed by World Wide Consortium 
+  (W3C) in 2000, is the more extended version of the popular HTML. It is the same 
+  HTML but defined as an XML application, which combines the advantages of both HTML and XML.
+  XHTML retains all the features of HTML but introduced more strict rules for creating pages, 
+  which allows you to make sites independent of the display device and browser.
+                 (~^--^~) Difference between HTML and XHTML
+ 1, You should always use <!DOCTYPE ....>
+An XHTML document must include an XHTML Doctype Declaration. 
+Other required elements are the <html>, <head>, <title>, and <body> tags.
+  (~^--^~)Example of XHTML Document With Required Elements:
+==>  <!DOCTYPE html PUBLIC>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Title of the document</title>
+  </head>
+  <body>
+    Content of the page
+  </body>
+</html>
+<!--
+<!-- <var> 2, You should insert XHTML elements properly. In an XHTML document, you cannot nest elements improperly. 
+  (~^--^~) It should look like this:
+==> <strong>
+ <em>This text is bold and italic</strong>
+</em>
+3, Unlike HTML, where we can sometimes omit the closing tag, 
+ (~^--^~) in XHTML the closing tag is required always and everywhere:
+ ==> A break: <br/>
+==> A horizontal rule: 
+<hr/>
+==> An image: <img src="smile.gif" alt="Always smile" />
+4, Lowercase and uppercase tags are distinguished in XHTML. To avoid confusion, all tags, 
+ (~^--^~) as well as their attributes must be typed in lowercase:
+==> <body>
+  <p>Some paragraph</p>
+</body></var> 
+<!-- <var> 5, You must write XHTML attributes in lower case,
+ (~^--^~)  like this:
+==> <table width="100%">
+6, You must put the attribute values in quotes, 
+ (~^--^~) like this:
+==> <table width="100%">
+7, You cannot minimize attributes. The abbreviated attribute is not assigned a value. An attribute can be assigned an attribute value that matches the name. 
+ (~^--^~)  It shouldn’t look like this:
+==> <input type="checkbox" name="flower" value="rose" checked />
+==> (~^--^~)  Instead, it must look like this:
+
+==> <input type="checkbox" name="flower" value="rose" checked="checked" />
+8,Instead of the name attribute you’ve better use id. In XHTML the name is partially obsolete,
+ that’s why it’s recommended to use id attribute.
+                            (~^--^~) Benefits of XHTML
+The fact that in XHTML all tags must be closed and nested correctly makes the code look much cleaner.
+XHTML uses less bandwidth, which reduces cost especially if your site has thousands of pages.
+Thanks to being well-formed, XHTML documents are easily transported to wireless devices, 
+Braille readers and other specialized web environments.
+XHTML works with CSS to create web pages easily.
+-->
+<!--
+                     (~^--^~) Origin of HTML
+  The concept of HTML came to the mind of Sir Tim Berners-Lee when he saw 
+  researchers at CERN need to share documents many times. And then, he proposed
+   that he develop a markup language that would help connect computers worldwide.
+    According to this idea, the ordinary user can access the file of one computer from
+     another computing device by accessing the markup language he proposed. 
+     Hypertext system refers to the set or the network of documents written in text and
+      connected using hyperlinks. And using this, the researchers could jump to other files
+       just by clicking on hyperlinks.
+      (~^--^~) Evolution of HTML Versions
+                     (~^--^~)  HTML 1.0
+It was the same version of HTML and was used till 1994. However, it has minimal
+ features and functionality because users can only use twenty elements. 
+ There was not much use of it, and also, at that time, a few people were involved in web development.
+
+                       (~^--^~) HTML 2.0
+It was the second version of HTML and became the standard language until HTML
+ 3.2 came. Using this language, the user can change the background color, 
+ text color, and other formatting. It was a significant improvement in HTML 1.0
+  that came in 1995. It was also when W3C was established to make the standards for websites.
+                     (~^--^~)  HTML 3
+At this time, most of the users got friendly with HTML and started using it. Hence,
+ it was the time when the dependency on HTML was increasing. And some of them started
+  willing to increase the look of their web pages. Hence, the HTML authors added 
+  new features and attributes in this version of HTML.
+
+                    (~^--^~) HTML 3.2
+During this time, many HTML tags were coming to make the website more attractive and functional.
+And W3C was also trying to make the HTML more potent than previous versions. And with these
+ additional attributes and features, HTML 3.2 was endorsed by W3C. By 1997, HTML 3.2 became
+  the standard markup language for web-based applications.
+                   (~^--^~) HTML 4.01
+HTML 4.01 is one of the significant HTML versions in the history of HTML. Because it was
+ the most extensively used markup language at that time. It was launched in 1999 and 
+ has CSS or cascading style sheets to add visual effects to web pages. Along with this, 
+ many other advanced features were not in previous versions of it. Hence, because of these 
+ additional features, it was a more trouble-free version of HTML.
+                   (~^--^~)  HTML 5
+HTML 5 is the latest and current version of HTML with lots of attributes and functionalities.
+ It works even if you are not connected with the internet and can be used for web-based applications.
+  The great thing about HTML 5 is that it is supported by most web browsers, including Chrome,
+   Firefox, Opera, and other browsers.
+
+Also, now CSS has developed, and modern browsers also support HTML5. Hence, it has become 
+easy to define a website and its elements excellently in the minimal issue.
+                 (~^--^~) Future of HTML
+HTML has covered a long journey from a simple concept of file sharing to defining web elements. 
+It has become a crucial thing to learn and use while building web pages and applications. Currently, 
+HTML5 is the latest version that is supported by most browsers. And in the future, we can see an
+ updated version of HTML5 again by W3C with additional features. Hence, the use of HTML will continue,
+  and developers will use it a lot to define their website and its pages inaccurately.
